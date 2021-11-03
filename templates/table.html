@@ -1,0 +1,56 @@
+{% extends 'base.html'%}
+
+{% block title %}
+Customers Table
+{% endblock %}
+{% block main %}
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>CustomerID</th>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>Phone</th>
+            <th>Street</th>
+            <th>City</th>
+            <th>State</th>
+            <th>ZIP</th>
+            <th>OrderID</th>
+            <th>ManagerID</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Freight</th>
+            <th>OrderDate</th>
+            <th>ShippedDate</th>
+        </tr>
+
+    </thead>
+
+    <tbody>
+        {% for row in rows %}
+        <tr>
+            <td>{{row.CustomerID}}</td>
+            <td>{{row.FirstName}}</td>
+            <td>{{row.LastName}}</td>
+            <td>{{row.Phone}}</td>
+            <td>{{row.Street}}</td>
+            <td>{{row.City}}</td>
+            <td>{{row.State}}</td>
+            <td>{{row.ZIP}}</td>
+            <td>{{row.OrderID}}</td>
+            <td>{{row.ManagerID}}</td>
+            <td>{{row.Quantity}}</td>
+            <td>{{row.Price}}</td>
+            <td>{{row.Freight}}</td>
+            <td>{{row.OrderDate}}</td>
+            <td>{{row.ShippedDate}}</td>
+        </tr>
+        {% endfor %}
+
+    </tbody>
+
+
+</table>
+
+{% endblock %}
